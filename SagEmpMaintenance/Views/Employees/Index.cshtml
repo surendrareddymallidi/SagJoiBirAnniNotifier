@@ -1,0 +1,99 @@
+﻿@model IEnumerable<SagEmpDataModel.busSagEmployee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.middleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateOfJoining)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.education)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.previousCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.previousCompanyDesignation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hobbies)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.middleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateOfJoining)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.education)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.previousCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.previousCompanyDesignation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hobbies)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.sagId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.sagId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.sagId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,159 @@
+﻿@model SagEmpDataModel.busSagEmployee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Employee</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.middleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.middleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateOfJoining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateOfJoining)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.education)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.education)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.previousCompany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.previousCompany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.previousCompanyDesignation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.previousCompanyDesignation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hobbies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hobbies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.joiningMailSent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.joiningMailSent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birthdays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birthdays)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anniversaries)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.anniversaries)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsTerminated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsTerminated)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

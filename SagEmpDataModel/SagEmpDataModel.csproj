@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FECA087A-1EB6-41CD-93A6-879AF947473D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SagEmpDataModel</RootNamespace>
+    <AssemblyName>SagEmpDataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="busSagEmployee.cs" />
+    <Compile Include="busSagLocation.cs" />
+    <Compile Include="Migrations\201902230525016_InitialModel.cs" />
+    <Compile Include="Migrations\201902230525016_InitialModel.Designer.cs">
+      <DependentUpon>201902230525016_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902230554349_customedtableColumnNames.cs" />
+    <Compile Include="Migrations\201902230554349_customedtableColumnNames.Designer.cs">
+      <DependentUpon>201902230554349_customedtableColumnNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902230717346_CustomizedColumnNameJoiningMailSent.cs" />
+    <Compile Include="Migrations\201902230717346_CustomizedColumnNameJoiningMailSent.Designer.cs">
+      <DependentUpon>201902230717346_CustomizedColumnNameJoiningMailSent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902230734272_AddedNonMappedColumnToEmployee.cs" />
+    <Compile Include="Migrations\201902230734272_AddedNonMappedColumnToEmployee.Designer.cs">
+      <DependentUpon>201902230734272_AddedNonMappedColumnToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231051452_AddedNonMappedColumnToEmployee1.cs" />
+    <Compile Include="Migrations\201902231051452_AddedNonMappedColumnToEmployee1.Designer.cs">
+      <DependentUpon>201902231051452_AddedNonMappedColumnToEmployee1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231101239_ModifedEmailTypeColumn.cs" />
+    <Compile Include="Migrations\201902231101239_ModifedEmailTypeColumn.Designer.cs">
+      <DependentUpon>201902231101239_ModifedEmailTypeColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231133179_ModifedEmailTypeColumn1.cs" />
+    <Compile Include="Migrations\201902231133179_ModifedEmailTypeColumn1.Designer.cs">
+      <DependentUpon>201902231133179_ModifedEmailTypeColumn1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231148388_emailTypeNotMapped.cs" />
+    <Compile Include="Migrations\201902231148388_emailTypeNotMapped.Designer.cs">
+      <DependentUpon>201902231148388_emailTypeNotMapped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231152172_MappedEmailTypeToDb.cs" />
+    <Compile Include="Migrations\201902231152172_MappedEmailTypeToDb.Designer.cs">
+      <DependentUpon>201902231152172_MappedEmailTypeToDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231245158_SomeRenaming.cs" />
+    <Compile Include="Migrations\201902231245158_SomeRenaming.Designer.cs">
+      <DependentUpon>201902231245158_SomeRenaming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231446101_DateTimePicker.cs" />
+    <Compile Include="Migrations\201902231446101_DateTimePicker.Designer.cs">
+      <DependentUpon>201902231446101_DateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231452050_photomaderequired.cs" />
+    <Compile Include="Migrations\201902231452050_photomaderequired.Designer.cs">
+      <DependentUpon>201902231452050_photomaderequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231545515_photoTypeChanged.cs" />
+    <Compile Include="Migrations\201902231545515_photoTypeChanged.Designer.cs">
+      <DependentUpon>201902231545515_photoTypeChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231547445_photoTypeChanged1.cs" />
+    <Compile Include="Migrations\201902231547445_photoTypeChanged1.Designer.cs">
+      <DependentUpon>201902231547445_photoTypeChanged1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902231600180_PostedFileAdded.cs" />
+    <Compile Include="Migrations\201902231600180_PostedFileAdded.Designer.cs">
+      <DependentUpon>201902231600180_PostedFileAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SagEmployeeDbContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201902230525016_InitialModel.resx">
+      <DependentUpon>201902230525016_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902230554349_customedtableColumnNames.resx">
+      <DependentUpon>201902230554349_customedtableColumnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902230717346_CustomizedColumnNameJoiningMailSent.resx">
+      <DependentUpon>201902230717346_CustomizedColumnNameJoiningMailSent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902230734272_AddedNonMappedColumnToEmployee.resx">
+      <DependentUpon>201902230734272_AddedNonMappedColumnToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231051452_AddedNonMappedColumnToEmployee1.resx">
+      <DependentUpon>201902231051452_AddedNonMappedColumnToEmployee1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231101239_ModifedEmailTypeColumn.resx">
+      <DependentUpon>201902231101239_ModifedEmailTypeColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231133179_ModifedEmailTypeColumn1.resx">
+      <DependentUpon>201902231133179_ModifedEmailTypeColumn1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231148388_emailTypeNotMapped.resx">
+      <DependentUpon>201902231148388_emailTypeNotMapped.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231152172_MappedEmailTypeToDb.resx">
+      <DependentUpon>201902231152172_MappedEmailTypeToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231245158_SomeRenaming.resx">
+      <DependentUpon>201902231245158_SomeRenaming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231446101_DateTimePicker.resx">
+      <DependentUpon>201902231446101_DateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231452050_photomaderequired.resx">
+      <DependentUpon>201902231452050_photomaderequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231545515_photoTypeChanged.resx">
+      <DependentUpon>201902231545515_photoTypeChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231547445_photoTypeChanged1.resx">
+      <DependentUpon>201902231547445_photoTypeChanged1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231600180_PostedFileAdded.resx">
+      <DependentUpon>201902231600180_PostedFileAdded.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

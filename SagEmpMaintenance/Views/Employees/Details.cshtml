@@ -1,0 +1,129 @@
+﻿@model SagEmpDataModel.busSagEmployee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.location.locationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location.locationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.middleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.middleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateOfJoining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateOfJoining)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.education)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.education)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.previousCompany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.previousCompany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.previousCompanyDesignation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.previousCompanyDesignation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hobbies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hobbies)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsTerminated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsTerminated)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sagId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
